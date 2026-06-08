@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Google Colab temporary files
+/content/
+
+# Environment files
+.env
+venv/
+.venv/
+
+# Large datasets
+data/raw/

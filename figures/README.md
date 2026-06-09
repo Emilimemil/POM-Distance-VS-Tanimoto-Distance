@@ -2,41 +2,40 @@
 
 This directory contains figures generated from:
 
-notebooks/pom_tanimoto_metabolic_correlations.ipynb
+`notebooks/pom_tanimoto_metabolic_correlations.ipynb`
 
-## metabolic_vs_pom.png
+---
 
-Relationship between metabolic distance and POM distance.
+## Metabolic Distance vs. POM Distance
 
-- X-axis: Metabolic distance
-- Y-axis: POM distance
-- Green line: Linear regression trendline
+This figure shows the relationship between metabolic distance and Principal Odor Map (POM) distance.
 
-## metabolic_vs_tanimoto.png
+![Metabolic Distance vs POM Distance](Metabolic_vs_POM_Distance.png)
 
-Relationship between metabolic distance and Tanimoto distance.
+---
 
-- X-axis: Metabolic distance
-- Y-axis: Tanimoto distance
-- Green line: Linear regression trendline
+## Tanimoto Distance vs. Metabolic Distance
 
-## pom_vs_tanimoto.png
+This figure shows the relationship between Tanimoto distance and metabolic distance.
 
-Relationship between POM distance and Tanimoto distance.
+![Tanimoto Distance vs Metabolic Distance](Tanimoto_vs_Metabolic_Distance.png)
 
-- X-axis: POM distance
-- Y-axis: Tanimoto distance
-- Green line: Linear regression trendline
+---
 
-## Generation
+## Tanimoto Distance vs. POM Distance
 
-Generated using:
+This figure shows the relationship between Tanimoto distance and POM distance.
 
-- Python
-- Pandas
-- Plotly
-- SciPy
+![Tanimoto Distance vs POM Distance](Tanimoto_vs_POM_Distance.png)
 
-Data source:
+---
+
+## Data Source
+
+The analysis uses metabolite pair data from:
+
 - Qian et al. (2023)
-- Lee et al. (2023)
+
+and odor embeddings from:
+
+- Lee et al. (2023) Principal Odor Map (POM)

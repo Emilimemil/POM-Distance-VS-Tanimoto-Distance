@@ -1,46 +1,102 @@
 # POM Distance vs Tanimoto Distance
 
-This repository contains code for analyzing the relationship between chemical, metabolic, and perceptual representations of odorants using datasets derived from Qian et al. (2023) and Lee et al. (2023).
+This repository explores the relationship between:
 
-## Project Overview
+- Metabolic Distance
+- Principal Odor Map (POM) Distance
+- Tanimoto Distance
 
-Odor similarity can be quantified in several different ways:
+using metabolite-pair data from Qian et al. (2023) and odor representations from the Principal Odor Map (Lee et al., 2023).
 
-* **Tanimoto Distance**: Measures chemical structural similarity between molecules using molecular fingerprints.
-* **Metabolic Distance**: Measures the shortest path length connecting two metabolites within a metabolic network.
-* **Principal Odor Map (POM) Distance**: Measures perceptual similarity between odorants in a machine-learning-derived odor representation space.
+## Motivation
 
-This project investigates how well chemical and metabolic relationships predict perceptual similarity.
+The Principal Odor Map (POM) has been proposed as a representation of perceptual odor similarity. Previous work has suggested that POM may capture relationships between molecules that extend beyond traditional structural similarity metrics.
 
-## Methods
+This project investigates:
 
-The analysis extracts odorant pairwise distances from published datasets and compares:
-
-1. POM Distance vs Tanimoto Distance
-2. POM Distance vs Metabolic Distance
-
-Pearson correlation coefficients are calculated to quantify the relationships between these distance metrics.
+1. The relationship between metabolic distance and POM distance.
+2. The relationship between metabolic distance and Tanimoto distance.
+3. The relationship between POM distance and Tanimoto distance.
 
 ## Repository Structure
 
 ```text
-.
-├── notebooks/
-│   └── pom_tanimoto_metabolic_correlation.ipynb
-├── src/
-├── figures/
+POM-Distance-VS-Tanimoto-Distance/
 ├── data/
+│   └── README.md
+├── figures/
+│   ├── README.md
+│   ├── Metabolic_vs_POM_Distance.png
+│   ├── Tanimoto_vs_Metabolic_Distance.png
+│   └── Tanimoto_vs_POM_Distance.png
+├── notebooks/
+│   └── pom_tanimoto_metabolic_correlations.ipynb
+├── requirements.txt
 └── README.md
 ```
 
-## Example Questions
+## Data
 
-* Does chemical similarity predict perceptual similarity?
-* Does metabolic organization better explain odor perception than molecular structure?
-* How strongly are odor representations related across these different spaces?
+The original dataset is not distributed with this repository.
+
+The analysis requires:
+
+```text
+metabolite_distance.csv
+```
+
+which can be obtained from the supplementary materials associated with:
+
+Qian et al. (2023)
+
+See `data/README.md` for details.
+
+## Running the Notebook
+
+Open:
+
+```text
+notebooks/pom_tanimoto_metabolic_correlations.ipynb
+```
+
+Place the dataset in one of the supported locations:
+
+### Local Jupyter
+
+```text
+data/metabolite_distance.csv
+```
+
+### Google Colab
+
+Upload:
+
+```text
+metabolite_distance.csv
+```
+
+through the Colab file browser.
+
+The notebook automatically detects the available file location.
+
+## Results
+
+Generated figures are available in:
+
+```text
+figures/
+```
+
+See:
+
+```text
+figures/README.md
+```
+
+for figure descriptions and previews.
 
 ## References
 
-Lee BK et al. (2023). A Principal Odor Map Unifies Diverse Tasks in Olfactory Perception.
+Qian, W. W., et al. (2023)
 
-Qian WW et al. (2023). Metabolic Activity Organizes Olfactory Representations.
+Lee, B. K., et al. (2023) Principal Odor Map
